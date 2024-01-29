@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Nunito" sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #eec06a;
+    background-image: linear-gradient(315deg, #eec06a 0%, #7ee8fa 73%);
+
+}
+.container{
+    max-width: 500px;
+    margin-top: 50px;
+}
+.kitchen-title{
+    align-items: center;
+    font-size: 30px;
+
+}
+.kitchen-header{
+    margin: 30px 0 20px;
+    display: flex;
+}
+.kitchen-header input{
+    height: 42px;
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+}
+.kitchen-header button{
+    font-size: 18px;
+    padding: 0 20px;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: black;
+    transition: 0.3s;
+}
+.kitchen-header button:hover{
+    background-color: rgba(0,0,0,0.7);
+}
+.kitchen-items-list{
+    text-align: left;
+    list-style: none;
+    perspective: 1000px;
+}
+.kitchen-items-list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color :#ffac81;
+    background-image: linear-gradient(315deg, #ffac81 0%, #ff928b 74%);
+    padding: 10px 15px;
+    margin: 4px 0;  
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    animation: 0.3s ease-in-out;
+    animation-name: slideIn;
+    
+}.fa-trash .fa-edit{
+    cursor: pointer;
+    background-color: white;
+    padding: 6px 10px;
+    border-radius: 7px;
+    text-align: center;
+    margin-top: 3px;
+    color: #332d2d;
+}
+.fa-trash{
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+/* Annimation*/
+@keyframes slideIn{
+    from{
+        opacity: 0;
+        transform: rotateX(60deg) translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform:rotateX(0deg) translateY(0px);
+    }
+}
+
+
+/*Animation slideout*/
+.slideOut{
+    transform: rotateX(60deg) translateY(-10px);
+    opacity: 0;
+    transition: 1s;
+
+}
+
+
